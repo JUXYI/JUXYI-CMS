@@ -8,9 +8,20 @@ export default defineConfig(() => ({
   server: {
     port: 4200,
     host: 'localhost',
+    // --- 核心代理配置开始 ---
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8080', // 你的 Spring Boot 后端地址
+        changeOrigin: true, // 允许跨域
+        secure: false, // 如果是 https 接口请设为 true
+        // 如果后端接口没有 /api 前缀，可以开启下面的 rewrite
+        // rewrite: (path) => path.replace(/^\/api/, '')
+      },
+    },
+    // --- 核心代理配置结束 ---
   },
   preview: {
-    port: 4200,
+    port: 4300,
     host: 'localhost',
   },
   plugins: [react()],

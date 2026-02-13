@@ -11,6 +11,9 @@
     },
     {
       "path": "./apps/mobile"
+    },
+    {
+      "path": "./libs/shared/api-client"
     }
   ]
 }

@@ -45,6 +45,7 @@
     "eslint-plugin-react-hooks": "5.0.0",
     "jiti": "2.4.2",
     "jsdom": "~22.1.0",
+    "jsonc-eslint-parser": "^2.1.0",
     "metro-config": "~0.83.0",
     "metro-resolver": "~0.83.0",
     "nx": "22.5.0",
@@ -61,7 +62,8 @@
   },
   "workspaces": [
     "packages/*",
-    "apps/*"
+    "apps/*",
+    "libs/shared/*"
   ],
   "dependencies": {
     "antd": "^6.3.0",
