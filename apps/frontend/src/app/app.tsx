@@ -1,6 +1,7 @@
 // Uncomment this line to use CSS modules
 // import styles from './app.module.css';
 import NxWelcome from './nx-welcome';
+import ApiDemo from './ApiDemo';
 
 import { Route, Routes, Link } from 'react-router-dom';
 
@@ -23,6 +24,9 @@ export function App() {
           <li>
             <Link to="/page-2">Page 2</Link>
           </li>
+          <li>
+            <Link to="/api-demo">API Demo</Link>
+          </li>
         </ul>
       </div>
       <Routes>
@@ -43,6 +47,7 @@ export function App() {
             </div>
           }
         />
+        <Route path="/api-demo" element={<ApiDemo />} />
       </Routes>
       {/* END: routes */}
     </div>

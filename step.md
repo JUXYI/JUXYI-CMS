@@ -212,6 +212,28 @@ juxyi-cms/
 
 ```
 
+### 查看 project.json
+
+```text
+npx nx show project frontend --web
+```
+
+```text
+
+# 进入安卓目录
+cd apps/mobile/android
+
+# 执行清理 (Windows 请用 gradlew.bat)
+./gradlew clean
+
+# 回到根目录
+cd ../../..
+
+npx nx start mobile --reset-cache
+
+npx nx run-android mobile
+```
+
 ### 下一步建议
 
 您现在的核心骨架已经搭建完毕。接下来的逻辑步骤是：
